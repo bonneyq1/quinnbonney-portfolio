@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝚀uⅈ𝚗𝖓‘𝓼 palooza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Rubik+Mono+One&display=swap">
+
+</head>
+<body>
+     <!-- Loading Screen -->
+    <div id="loading-screen">
+        <img src="loading-image.png" alt="Loading Image" id="loading-image">
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display:none;">
+        <!-- Title Drawing -->
+        <header>
+            <div class="header-container">
+                <img src="home_png/title_drawing.png" alt="Quinn's Artpalooza" id="title-drawing">
+
+                <!-- Menu Icon (Visible on small screens) -->
+                <img id="menu-icon" src="menu-icon.png" alt="Menu Icon">
+
+                <!-- Navigation Menu -->
+                    <div class="nav-container">
+                    <nav>
+                        <ul id="menu-tabs">
+                            <li>
+                                <a href="page1_graphic_design.html" class="active">
+                                    <img src="home_png/graphic_design_scrap.png" alt="Graphic Design Scrap">
+                                    <span>Graphic Design</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="page2_photography.html" class="active">
+                                    <img src="home_png/photography_scrap.png" alt="Photography Scrap">
+                                    <span>Photography</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="page3_otherstuff.html" class="active">
+                                    <img src="home_png/other_stuff_scrap.png" alt="Other Stuff Scrap">
+                                    <span>Other Stuff</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="page4_aboutme.html" class="active">
+                                    <img src="home_png/about_me_scrap.png" alt="About Me Scrap">
+                                    <span>About Me</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content with Sticky Notes -->
+        <main>
+        <div class="design-container">
+            <div class="scrapbook-bg1 scrapbook-item1 scrapbook-item">
+                    <img src="home_png/main_imgs/updates.png" alt="Updates with heart drawing"/>
+                </a>
+            </div>
+            <div class="scrapbook-bg2 scrapbook-item2 scrapbook-item ">
+                <a href="https://linktr.ee/quinnbonney">
+                    <img src="home_png/main_imgs/mylinktree.png" alt="My linktree">
+                    <span class="item-text">a linktree to my summer research project<br>on academic journal design</span>
+                </a>
+            </div>
+            <div class="scrapbook-bg3 scrapbook-item3 scrapbook-item ">
+                    <img src="home_png/main_imgs/ireland.jpg" alt="Image of sheep in Ireland">
+                    <span class="item-text">I went on a family trip<br>to Ireland</span>
+            </div>
+            
+            <div class="scrapbook-bg4 scrapbook-item4 scrapbook-item">
+                <a href="https://www.are.na/quinn-bonney">
+                    <img src="home_png/main_imgs/myarena.png" alt="My are.na homepage"/>
+                    <span class="item-text">here is my are.na page<br>I am constantly messing with...</span>
+                </a>
+            </div>
+    
+        </div>
+        </main>
+
+        <footer>
+            <div>
+                <ul>
+                  <li><a href="https://www.are.na/quinn-bonney/channels">are.na</a></li>
+                  <li><a href="https://www.instagram.com/quinnsartpalooza">Instagram</a></li>
+                  <li><a href="mailto:bonneyq1@newpaltz.edu">Email</a></li>
+                  <li><a href="https://github.com/bonneyq1">Github</a></li>
+                  <li>
+                    <p>👋</p>
+                  </li>
+                </ul>
+              </div>
+        </footer>
+
+        <!--loading screen JavaScript-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const loadingScreen = document.getElementById('loading-screen');
+                const mainContent = document.getElementById('main-content');
+        
+                // Hide loading screen and show main content after 3.5 seconds
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    mainContent.style.display = 'block';
+                }, 2500); // 3.5 seconds delay
+            });
+        </script>
+        
+        <!-- JavaScript to toggle the navigation menu -->
+        <script>
+            document.getElementById('menu-icon').addEventListener('click', function() {
+                const navContainer = document.querySelector('.nav-container');
+                navContainer.classList.toggle('show'); // Toggle the "show" class
+            });
+        </script>
+
+</body>
+</html>

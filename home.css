@@ -1,0 +1,231 @@
+/* Title Drawing */
+#title-drawing {
+    flex-shrink: 0; /* Prevent the title image from shrinking */
+    max-width: 500px; /* Adjust the maximum width as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+#menu-icon {
+    display: none; /* Initially hidden */
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    z-index: 101; /* Ensure it's above the menu */
+}
+/* Loading Screen Styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Background color of the loading screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it is on top of everything */
+}
+
+#loading-image {
+    width: 150px; /* Adjust image size */
+    height: auto;
+}
+@media screen and (max-width: 1130px) {
+  #menu-icon {
+      display: block; /* Show the menu icon */
+  }
+
+  .nav-container {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Hide the menu off-screen */
+      width: 250px;
+      height: 100vh;
+      background-color: #fff;
+      transition: 0.3s;
+      z-index: 1000;
+  }
+
+  .nav-container.show {
+      right: 0; /* Show the menu when .show class is added */
+  }
+
+  nav ul {
+      flex-direction: column;
+      padding-top: 60px; /* Space for the menu icon */
+  }
+
+  nav ul li {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  #title-drawing {
+      max-width: 300px; /* Adjust for smaller screens */
+  }
+}
+
+/* Navigation Menu */
+nav {
+    display: flex; /* Flex layout for the navigation menu */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Add padding for spacing */
+    margin-top: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display menu items in a row */
+    flex-grow: 1; /* Allow the ul to take up available space */
+}
+
+nav ul li {
+    margin-right: 20px; /* Adjust space between items */
+    position: relative; /* Position relative for absolute positioning of text */
+    flex-grow: 1; /* Allow each li to grow */
+    flex-shrink: 1; /* Allow each li to shrink */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: flex; /* Flexbox for alignment within the list item */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    position: relative; /* Position relative for absolute positioning of text */
+    flex-grow: 1; /* Allow the link to grow and fill the available space */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 1.2rem; /* Use relative font size */
+    min-width: 0; /* Allow the text to shrink properly */
+}
+
+nav ul li img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensure image is block to avoid extra space */
+}
+
+nav ul li span {
+    position: absolute; /* Position the text over the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half width and height */
+    color: white; /* Text color */
+    font-size: 1.3rem; /* Use relative font size */
+    font-family: 'Jacques Francois Shadow', cursive; /* Ensure font is applied */
+    text-align: center; /* Center text */
+    min-width: 0; /* Allow the text to shrink properly */
+}
+
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black,
+        -2px -2px 0 black,  
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+nav ul li img {
+    transition: filter 0.3s ease-in-out;
+}
+
+nav ul li a:hover img {
+    filter: brightness(1.5); /* Brighten image on hover */
+}
+
+/* Background styles for design items */
+.scrapbook-bg1,
+.scrapbook-bg2,
+.scrapbook-bg3,
+.scrapbook-bg4 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 70px;
+  display: inline-block;
+}
+
+.scrapbook-bg1 {
+  background-image: url('sticky/sticky_note1.png');
+}
+
+.scrapbook-bg2 {
+  background-image: url('sticky/sticky_note2.png');
+}
+
+.scrapbook-bg3 {
+  background-image: url('sticky/sticky_note3.png');
+}
+
+.scrapbook-bg4 {
+  background-image: url('sticky/sticky_note4.png');
+}
+.scrapbook-bg4 .item-text {
+    margin-bottom: 80px; /* Adjust the padding as needed */
+}
+/* Container for design items */
+.design-container {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* Styles for individual design items */
+  .scrapbook-item {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Image styles */
+  .scrapbook-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .small-item {
+    max-width: 120px;
+  }
+  
+  /* Text inside design items */
+  .item-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* White background */
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  /* Link Styles */
+  .scrapbook-item a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px; /* Adjust this value as needed */
+  }
+  
+  .scrapbook-item a:hover {
+    color: pink;
+  }
+  
+  /* Ensure text inside the links is centered */
+    .scrapbook-item a .item-text {
+    display: block;
+    text-align: center;
+  }
