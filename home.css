@@ -157,19 +157,19 @@ nav ul li a:hover img {
 }
 
 .scrapbook-bg1 {
-  background-image: url('sticky/sticky_note1.png');
+  background-image: url('sticky/sticky_note1.webp');
 }
 
 .scrapbook-bg2 {
-  background-image: url('sticky/sticky_note2.png');
+  background-image: url('sticky/sticky_note2.webp');
 }
 
 .scrapbook-bg3 {
-  background-image: url('sticky/sticky_note3.png');
+  background-image: url('sticky/sticky_note3.webp');
 }
 
 .scrapbook-bg4 {
-  background-image: url('sticky/sticky_note4.png');
+  background-image: url('sticky/sticky_note4.webp');
 }
 .scrapbook-bg4 .item-text {
     margin-bottom: 80px; /* Adjust the padding as needed */
